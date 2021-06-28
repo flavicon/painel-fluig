@@ -1,0 +1,57 @@
+@media screen and (max-width: 1920px){
+	.navbar {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1020px) {
+	.navbar {
+		width: 80%;
+	}
+}
+
+.navbar {
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+.logo {
+	flex-grow: 0;
+}
+
+.nav {
+	flex-grow: 1;
+	text-align: center;
+	line-height: 3;
+
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.time {
+	padding-right: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.button {
+	width: 60px;
+	height: 60px;
+
+	border: none;
+	border-radius: 50%;
+
+	background-color: #e3e3e3;
+
+	transition: filter 0.2s;
+}
+
+.button:hover {
+	filter: brightness(0.9);
+	cursor: pointer;
+}
+
+.button > img {
+	width: 40px;
+}

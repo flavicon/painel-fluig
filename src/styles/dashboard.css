@@ -1,0 +1,67 @@
+@media screen and (max-width: 1020px) {
+	.deadline {
+		width: 100%;
+	}
+
+	.description {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1020px) {
+	.deadline {
+		width: 80%;
+	}
+
+	.description {
+		width: 80%;
+	}
+}
+
+.dashboard {
+	width: 100%;
+	height: 40vh;
+	margin-top: 4rem;
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.deadline {
+	display: flex;
+	justify-content: space-around;
+}
+
+.description {
+	margin-top: 5rem;
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.legendChild {
+	display: flex;
+	margin-top: 1rem;
+}
+
+.legendChild > div {
+	width: 20px;
+	height: 20px;
+}
+
+.legendChild > p {
+	margin-left: 1rem;
+}
+
+.onTime {
+	background-color: #538A46;
+}
+
+.onLimit {
+	background-color: #EBBA31;
+}
+
+.late {
+	background-color: #AE191C;
+}
