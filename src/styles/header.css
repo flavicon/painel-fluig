@@ -1,17 +1,6 @@
-@media screen and (max-width: 1920px){
-	.navbar {
-		width: 100%;
-	}
-}
-
-@media screen and (max-width: 1920px) and (min-width: 1020px) {
-	.navbar {
-		width: 80%;
-	}
-}
-
 .navbar {
-	padding: 1rem 2rem;
+	width: 100%;
+	padding: 1rem 0;
 	display: flex;
 	justify-content: center;
 }
@@ -30,7 +19,6 @@
 }
 
 .time {
-	padding-right: 1rem;
 	display: flex;
 	align-items: center;
 }

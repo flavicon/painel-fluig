@@ -7,15 +7,15 @@ export function Dashboard() {
 		<>
 		<section className="dashboard">
 			<div className="deadline">
-				<Card color="#538A46">
+				<Card color="#538A46" width="300px" height="200px">
 					<span>30</span> <br/>
 					Solicitações
 				</Card>
-				<Card color="#EBBA31">
+				<Card color="#EBBA31" width="300px" height="200px">
 					<span>20</span> <br/>
 					Solicitações
 				</Card>
-				<Card color="#AE191C">
+				<Card color="#AE191C" width="300px" height="200px">
 					<span>100</span> <br/>
 					Solicitações
 				</Card>
