@@ -4,6 +4,7 @@ import { Card } from '../components/Card';
 import avatar from '../assets/avatar.svg';
 
 import '../styles/attendant.css';
+import { CardList } from '../components/CardList';
 
 export function Attendant() {
     //let { id } = useParams();
@@ -21,25 +22,32 @@ export function Attendant() {
             <div className="listFluigs">
                 <div className="cardsList">
                     <Card color="#538A46" width="200px" height="100px">
-                        <p>
                             10 <br />
                             Chamados
-                        </p>
                     </Card>
 
-                    <Card color="#538A46" width="200px" height="100px">
-                        <p>
+                    <Card color="#EBBA31" width="200px" height="100px">
                             10 <br />
                             Chamados
-                        </p>
                     </Card>
 
-                    <Card color="#538A46" width="200px" height="100px">
-                        <p>
+                    <Card color="#AE191C" width="200px" height="100px">
                             10 <br />
                             Chamados
-                        </p>
                     </Card>
+                </div>
+                <div className="fluigs">
+                    <CardList color="#AE191C" />
+                    <CardList color="#83B04F" />
+                    <CardList color="#AE191C" />
+                    <CardList color="#EBBA31" />
+                    <CardList color="#AE191C" />
+                    <CardList color="#AE191C" />
+                    <CardList color="#AE191C" />
+                    <CardList color="#EBBA31" />
+                    <CardList color="#83B04F" />
+                    <CardList color="#AE191C" />
+                    <CardList color="#83B04F" />
                 </div>
             </div>
         </div>
