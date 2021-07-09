@@ -1,4 +1,5 @@
 import { Card } from '../components/Card';
+import { Link } from 'react-router-dom';
 
 import '../styles/dashboard.css';
 
@@ -7,10 +8,12 @@ export function Dashboard() {
 		<>
 		<section className="dashboard">
 			<div className="deadline">
-				<Card color="#538A46" width="300px" height="200px">
-					<span>30</span> <br/>
-					Solicitações
-				</Card>
+				<Link to="/FluigOnTime">
+					<Card color="#538A46" width="300px" height="200px">
+						<span>30</span> <br/>
+						Solicitações
+					</Card>
+				</Link>
 				<Card color="#EBBA31" width="300px" height="200px">
 					<span>20</span> <br/>
 					Solicitações

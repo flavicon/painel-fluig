@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Attendant } from './pages/Attendant';
 import { Dashboard } from './pages/Dashboard';
 import { Time } from './pages/Time';
+import { FluigsGeral } from './pages/FluigsGeral';
 import './styles/global.css';
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
 			<div className="container">
 				<Header />
 				<Switch>
+					<Route path="/:id">
+						<FluigsGeral />
+					</Route>
 					<Route path="/atendimento">
 						<Time />
 					</Route>
