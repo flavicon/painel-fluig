@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Attendant } from './pages/Attendant';
 import { Dashboard } from './pages/Dashboard';
 import { Time } from './pages/Time';
+import { Login } from './pages/Login';
 import { FluigsGeral } from './pages/FluigsGeral';
 import './styles/global.css';
 
@@ -11,19 +12,29 @@ function App() {
 		<Router>
 			<div className="container">
 				<Header />
+
 				<Switch>
-					<Route path="/:id">
+					<Route exact path="/">
+							<Dashboard />
+					</Route>
+
+					<Route path="/fluig-geral">
 						<FluigsGeral />
 					</Route>
+
 					<Route path="/atendimento">
 						<Time />
 					</Route>
-					<Route path="/:id">
+
+					<Route path="/login">
+						<Login />
+					</Route>
+					
+					<Route path="/attendant">
 						<Attendant />
 					</Route>
-					<Route exact path="/">
-						<Dashboard />
-					</Route>
+					
+					
 				</Switch>
 			</div>
 		</Router>

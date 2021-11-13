@@ -1,5 +1,5 @@
 export function FluigsGeral() { 
 	return ( 
-		<div>Fluigs Geral</div>
+		<div>Fluigs Geral 1</div>
 	);
 }

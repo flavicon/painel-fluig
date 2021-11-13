@@ -21,6 +21,13 @@
 .time {
 	display: flex;
 	align-items: center;
+	margin-left: 5px;
+}
+
+.login {
+	display: flex;
+	align-items: center;
+	margin-left: 5px;
 }
 
 .button {
@@ -35,6 +42,7 @@
 	transition: filter 0.2s;
 }
 
+
 .button:hover {
 	filter: brightness(0.9);
 	cursor: pointer;
@@ -43,3 +51,24 @@
 .button > img {
 	width: 40px;
 }
+
+.button-login {
+	width: 60px;
+	height: 60px;
+
+	border: none;
+	border-radius: 50%;
+
+	background-color: #d3eaff;
+
+	transition: filter 0.2s;
+}
+
+.button-login:hover {
+	filter: brightness(0.7);
+	cursor: pointer;
+}
+
+/* .button > img {
+	width: 40px;
+} */
