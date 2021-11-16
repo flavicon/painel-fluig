@@ -20,9 +20,10 @@ export function FormLogin() {
     .then(res => res.json())
     .then(data => {
       
-      return  ( data.err === undefined 
+      return  ( data.err === undefined && data.token !== ""
                 ? ( localStorage.setItem('token', data.token), 
-                    alert("Logado com sucesso! Token Criado!!") 
+                    alert("Logado com sucesso! Token Criado!!"),
+                    window.location.href = "http://localhost:3000"
                   ) 
                 : alert(data.err)
               )
@@ -31,6 +32,7 @@ export function FormLogin() {
   }
   return (
       <form
+        // action="/"
         method='POST'
         onSubmit={(e) => {
         e.preventDefault()
