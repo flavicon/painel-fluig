@@ -1,6 +1,5 @@
 import { Card } from '../components/Card';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { Attendant } from './Attendant.jsx';
+import { Link } from 'react-router-dom';
 
 import '../styles/dashboard.css';
 

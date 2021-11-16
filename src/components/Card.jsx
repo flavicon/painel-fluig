@@ -1,3 +1,4 @@
+import React from 'react'
 import '../styles/card.css';
 
 export function Card(props) {
@@ -9,9 +10,10 @@ export function Card(props) {
                 width: props.width,
                 height: props.height,
         }}>
-            <p>
-                {props.children}
-            </p>
+           
+        <p>
+            {props.children}
+        </p>
         </div>
     )
 }
