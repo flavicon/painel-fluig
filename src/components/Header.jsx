@@ -2,10 +2,19 @@ import { Link } from 'react-router-dom';
 
 import logo from '../assets/logo_acal.svg';
 import timeIcon from '../assets/group.svg';
-import { Login } from 'grommet-icons';
+import LoginIcon from '@mui/icons-material/Login';
 import '../styles/header.css';
+import { useEffect, useState } from 'react';
 
 export function Header() {
+	const [ userLogin, setUserlogin ] = useState('')
+
+	// alert(userLogin)
+	useEffect(() => {
+		setUserlogin(localStorage.getItem('user') || "")
+	}, [ userLogin ])
+
+	
 	return (
 		<header className="navbar">
 			<div className="logo">
@@ -14,6 +23,15 @@ export function Header() {
 			<nav className="nav">
 				<h1>Acompanhamento Fluig de Suporte</h1>
 			</nav>
+
+			<div className="time">
+				{/* <Link to="atendimento"> */}
+					{/* <button className="button"> */}
+						{/* <img src={timeIcon} alt="Group icon" /> */}
+						<h3 style={{color: "blue"}}>{userLogin}</h3>
+					{/* </button> */}
+				{/* </Link> */}
+			</div>
 			
 			<div className="time">
 				<Link to="atendimento">
@@ -26,7 +44,7 @@ export function Header() {
 			<div className="time">
 				<Link to="login">
 					<button className="button-login">
-						<Login color='blue' size='40px' />
+						<LoginIcon color="primary" sx={{ fontSize: 40 }} />
 					</button>
 				</Link>
 			</div>

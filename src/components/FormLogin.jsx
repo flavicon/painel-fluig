@@ -21,7 +21,9 @@ export function FormLogin() {
     .then(data => {
       
       return  ( data.err === undefined && data.token !== ""
-                ? ( localStorage.setItem('token', data.token), 
+                ? ( 
+                    localStorage.setItem('token', data.token),
+                    localStorage.setItem('user', data.user),
                     alert("Logado com sucesso! Token Criado!!"),
                     window.location.href = "http://localhost:3000"
                   ) 
@@ -66,21 +68,21 @@ export function FormLogin() {
         <br />
 
         <Stack direction="row" sx={{ marginTop: 3}} spacing={2}>
-          <Button  
+          {/* <Button  
             color="error"
             variant="contained"
             size="small"
           >
             Cancelar
-          </Button>
+          </Button> */}
           <Button 
             type="submit"
             size="large"
-            sx={{ backgroundColor: '#0d47a1'}}
+            sx={{ backgroundColor: '#0d47a1', width: '100%'}}
             // color="primary"
             variant="contained"
           >
-            Logar
+            Log in
           </Button>
         </Stack>
       </form>
