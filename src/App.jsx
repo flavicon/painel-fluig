@@ -5,37 +5,40 @@ import { Dashboard } from './pages/Dashboard';
 import { Time } from './pages/Time';
 import { Login } from './pages/Login';
 import { FluigsGeral } from './pages/FluigsGeral';
+import { ContextProvider } from './context/contextApi'
 import './styles/global.css';
 
 function App() {
 	return (
 		<Router>
 			<div className="container">
+				
 				<Header />
-
+				
 				<Switch>
-					<Route exact path="/">
-							<Dashboard />
-					</Route>
+					<ContextProvider>
+						<Route exact path="/">
+								<Login />
+						</Route>
 
-					<Route path="/fluig-geral">
-						<FluigsGeral />
-					</Route>
+						<Route path="/fluig-geral">
+							<FluigsGeral />
+						</Route>
 
-					<Route path="/atendimento">
-						<Time />
-					</Route>
+						<Route path="/atendimento">
+							<Time />
+						</Route>
 
-					<Route path="/login">
-						<Login />
-					</Route>
-					
-					<Route path="/attendant">
-						<Attendant />
-					</Route>
-					
-					
+						<Route path="/dashboard">						
+								<Dashboard />
+						</Route>
+						
+						<Route path="/attendant">
+							<Attendant />
+						</Route>
+					</ContextProvider>	
 				</Switch>
+				
 			</div>
 		</Router>
   	);

@@ -7,10 +7,10 @@ export function FormLogin() {
 
 
   const enviarDados = async () => {
-    await fetch('http://localhost:8080/auth',{
+    await fetch('http://localhost:8080/auth', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         login,
@@ -20,17 +20,18 @@ export function FormLogin() {
     .then(res => res.json())
     .then(data => {
       
-      return  ( data.err === undefined && data.token !== ""
+      return  (data.token !== "" && data.auth === true
                 ? ( 
                     localStorage.setItem('token', data.token),
                     localStorage.setItem('user', data.user),
+                    localStorage.setItem('auth', data.auth),
                     alert("Logado com sucesso! Token Criado!!"),
-                    window.location.href = "http://localhost:3000"
+                    window.location.href = "http://localhost:3000/dashboard"
                   ) 
-                : alert(data.err)
+                : alert(data.error)
               )
     })
-    .catch(err => console.log(err.err))
+    .catch(err => console.log(err.error))
   }
   return (
       <form
@@ -68,18 +69,10 @@ export function FormLogin() {
         <br />
 
         <Stack direction="row" sx={{ marginTop: 3}} spacing={2}>
-          {/* <Button  
-            color="error"
-            variant="contained"
-            size="small"
-          >
-            Cancelar
-          </Button> */}
           <Button 
             type="submit"
             size="large"
             sx={{ backgroundColor: '#0d47a1', width: '100%'}}
-            // color="primary"
             variant="contained"
           >
             Log in

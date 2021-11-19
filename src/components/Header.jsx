@@ -12,7 +12,7 @@ export function Header() {
 	// alert(userLogin)
 	useEffect(() => {
 		setUserlogin(localStorage.getItem('user') || "")
-	}, [ userLogin ])
+	}, [])
 
 	
 	return (
