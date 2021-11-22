@@ -1,45 +1,52 @@
 import React, { useContext, useState } from 'react'
 import { Card } from '../components/Card';
-import { Link, Route, Redirect } from 'react-router-dom';
-import { ContextApi } from '../context/contextApi'
+import { Link, Route, Redirect, useHistory } from 'react-router-dom';
 
 import '../styles/dashboard.css';
 
 export const CardDashboard = () => {
-  const { objUser } = useContext(ContextApi)
+  
 
-  return (
-    <div>
-    
-      <h1>{objUser.user}</h1>
-      <hr/>
-      {objUser.auth 
-        ?
-          <section className="dashboard">
-            <div className="deadline">
+  return <>
+    <section className="dashboard">
+      <div className="deadline">
 
-              <Link to="attendant">
-                <Card color="#538A46" width="300px" height="200px">
-                  <span>30</span> <br/>
-                  Solicitações
-                </Card>
-              </Link>
+        <Link to="attendant">
+          <Card color="#538A46" width="300px" height="200px">
+            <span>30</span> <br/>
+            Solicitações
+          </Card>
+        </Link>
 
-              <Card color="#EBBA31" width="300px" height="200px">
-                <span>20</span> <br/>
-                Solicitações
-              </Card>
-              <Card color="#AE191C" width="300px" height="200px">
-                <span>100</span> <br/>
-                Solicitações
-              </Card>
-            </div>
-          </section>
-        : () => window.location.href = "http://localhost:3000/"
-        
-      }
-    </div> 
-  )
+        <Card color="#EBBA31" width="300px" height="200px">
+          <span>20</span> <br/>
+          Solicitações
+        </Card>
+        <Card color="#AE191C" width="300px" height="200px">
+          <span>100</span> <br/>
+          Solicitações
+        </Card>
+      </div>
+    </section>
+    <section className="description">
+      <div className="legend">
+        <div className="legendChild">
+          <div className="onTime"></div>
+          <p>Dentro do prazo</p>
+        </div>
+
+        <div className="legendChild">
+          <div className="onLimit"></div>
+          <p>Proximo do prazo</p>
+        </div>
+
+        <div className="legendChild">
+          <div className="late"></div>
+          <p>Fora do prazo</p>
+        </div>
+      </div>
+    </section>
+  </>
 }
 
 

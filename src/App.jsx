@@ -1,14 +1,19 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import { Header } from './components/Header';
+
 import { Attendant } from './pages/Attendant';
 import { Dashboard } from './pages/Dashboard';
 import { Time } from './pages/Time';
 import { Login } from './pages/Login';
 import { FluigsGeral } from './pages/FluigsGeral';
+import { Logout } from './pages/Logout';
+
 import { ContextProvider } from './context/contextApi'
 import './styles/global.css';
 
 function App() {
+  
 	return (
 		<Router>
 			<div className="container">
@@ -35,6 +40,10 @@ function App() {
 						
 						<Route path="/attendant">
 							<Attendant />
+						</Route>
+
+            <Route path="/logout">
+							<Logout />
 						</Route>
 					</ContextProvider>	
 				</Switch>
