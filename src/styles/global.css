@@ -23,6 +23,7 @@ html, body {
 body {
     display: flex;
     justify-content: center;
+    /* background-color: rgb(94, 94, 94); */
 }
 
 .container {

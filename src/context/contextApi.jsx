@@ -17,7 +17,7 @@ export function ContextProvider({ children }){
     .then(result => result.json())
     .then(data => {
       console.log("Fetch: ", data)
-      setObjUser(data)
+      return setObjUser(data)
     })
     .catch(err => {
       console.log("Erro, Token invalid! ", err.message)
@@ -26,10 +26,12 @@ export function ContextProvider({ children }){
   }, [])
   
   return (
-    <ContextApi.Provider
-      value={{ objUser }}
-    >
-      { children }
-    </ContextApi.Provider>
+    <div>
+      <ContextApi.Provider
+        value={{ objUser }}
+      >
+        { children }
+      </ContextApi.Provider>
+    </div>
   )
 } 

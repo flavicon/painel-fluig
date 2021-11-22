@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react';
 export function Header() {
 	const [ userLogin, setUserlogin ] = useState('')
 
-	// alert(userLogin)
 	useEffect(() => {
 		setUserlogin(localStorage.getItem('user') || "")
 	}, [])
@@ -25,12 +24,7 @@ export function Header() {
 			</nav>
 
 			<div className="time">
-				{/* <Link to="atendimento"> */}
-					{/* <button className="button"> */}
-						{/* <img src={timeIcon} alt="Group icon" /> */}
-						<h3 style={{color: "blue"}}>{userLogin}</h3>
-					{/* </button> */}
-				{/* </Link> */}
+				<h3 style={{color: "blue"}}>{userLogin}</h3>
 			</div>
 			
 			<div className="time">

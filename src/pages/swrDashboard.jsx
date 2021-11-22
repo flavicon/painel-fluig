@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { CardDashboard } from '../components/CardDashboard'
 // import { Route, Redirect } from 'react-router-dom'
 // import { ContextApi } from '../context/contextApi'
-import { Login } from  '../pages/Login'
 import useSwr from 'swr'
 
 import '../styles/dashboard.css';
@@ -25,6 +24,8 @@ export function Dashboard() {
 
 	const { data, error } = useSwr(url, fetcher)
 
+	// console.log(data)
+
 	if (!data && !error) {
 		return <h1>Buscando dados do projeto...</h1>
 	}
@@ -33,14 +34,12 @@ export function Dashboard() {
 		return <h1>Deu error: {error.message}</h1>
 	}
 
-	// if(data.auth && data.user !== "unauthorized") {
-	if(data.auth) {
-		return <h1>Projeto: {data.user}</h1>
-	}
-
 	return (
 		<>
-			<Login />
+			<h1>Projeto: {data.user}</h1>
 		</>
 	)
+
+
+	// return <CardDashboard />
 }
