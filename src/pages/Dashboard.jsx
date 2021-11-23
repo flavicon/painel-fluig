@@ -22,6 +22,7 @@ export function Dashboard() {
 	.then(res => res.json())
 
   const { data, error } = useSwr(url, fetcher)
+  const rota = '/'
 
 	if (!data && !error) {
 		return <h1>Buscando dados do projeto...</h1>
@@ -38,7 +39,12 @@ export function Dashboard() {
 
 	return (
 		<>
-			<Login />
+			{/* <Login /> */}
+      <h2>Usuário não autorizado...</h2>
+      {setTimeout(() => {
+
+        {window.location.href = rota}
+      }, 800)}
 		</>
 	)
 }

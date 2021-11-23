@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 
 import logo from '../assets/logo_acal.svg';
 import timeIcon from '../assets/group.svg';
-// import LoginIcon from '@mui/icons-material/Login';
+import WidgetsIcon from '@mui/icons-material/Widgets';
 import LogoutIcon from '@mui/icons-material/Logout';
+import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import '../styles/header.css';
 import { useEffect, useState } from 'react';
 
@@ -25,19 +26,19 @@ export function Header() {
 				<h1>Acompanhamento Fluig de Suporte</h1>
 			</nav>
 
-			<div className="time">
-				{/* <Link to="atendimento"> */}
-					{/* <button className="button"> */}
-						{/* <img src={timeIcon} alt="Group icon" /> */}
-						<h3 style={{color: "blue"}}>{userLogin}</h3>
-					{/* </button> */}
-				{/* </Link> */}
+      <div className="time">
+				<Link to="dashboard">
+					<button className="button">
+            <WidgetsIcon color="primary" sx={{ fontSize: 32 }} />
+					</button>
+				</Link>
 			</div>
 
 			<div className="time">
 				<Link to="atendimento">
 					<button className="button">
-						<img src={timeIcon} alt="Group icon" />
+						{/* <img src={timeIcon} alt="Group icon" /> */}
+            <ViewModuleIcon color="primary" sx={{ fontSize: 40 }} />
 					</button>
 				</Link>
 			</div>
@@ -49,6 +50,11 @@ export function Header() {
 					</button>
 				</Link>
 			</div>
+
+      <div className="time">
+			  <h3 style={{color: "blue"}}>{userLogin}</h3>
+			</div>
+
 		</header>
 	)
 }
