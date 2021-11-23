@@ -1,6 +1,6 @@
 {
   "name": "painel_fluig",
-  "version": "0.2.3",
+  "version": "0.3.3",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.6.0",
@@ -20,6 +20,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.3",
+    "swr": "^1.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
